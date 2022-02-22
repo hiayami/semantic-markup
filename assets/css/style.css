@@ -1,0 +1,145 @@
+* {
+    /*this tells the browser to account for any border and padding in the values that are specified for an element's 
+    width and height. Info from https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing*/
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #d9dcd6;
+}
+
+header {
+    /*padding creates extra space around the elements on the nav bar*/
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #2a607c;
+    color: #ffffff;
+}
+
+header h1 {
+    /*displays elements inline, from left to right. With inline-block, can set height and width values*/
+    display: inline-block;
+    font-size: 48px;
+}
+
+header h1 span {
+    color: #d9dcd6;
+}
+
+header div {
+    padding-top: 15px;
+    margin-right: 20px;
+    /*Float makes the internal links in the nav bar towards the right side of the page*/
+    float: right;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+header div ul li::before {
+    /*list-style-type: none will not be picked up by a screen reader for unordered lists. Instead, add 
+    zero-width space as pseudo content for list items to ensure it is announced properly
+    info from: https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type*/
+    content: "\200B";
+}
+
+
+header div ul li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+p {
+    font-size: 16px;
+}
+
+.hero {
+    /*class that describes how big the background photo should cover*/
+    height: 800px;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+/*the float-left/right classes indicate for each element on which side the photo or content should be*/
+.float-left {
+    float: left;
+    margin-right: 25px;
+}
+
+.float-right {
+    float: right;
+    margin-left: 25px;
+}
+
+.content {
+    width: 75%;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+section img {
+    max-height: 200px;
+}
+
+aside {
+    margin-right: 20px;
+    padding: 20px;
+    /*clear: both used when you do not want any floating elements to be on the right or left side of this specific element. 
+    info from: https://stackoverflow.com/questions/12871710/what-does-the-css-rule-clear-both-do*/
+    clear: both;
+    float: right;
+    width: 20%;
+    height: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #2589bd;
+}
+
+.aside-portion {
+    margin-bottom: 32px;
+    color: #ffffff;
+}
+
+aside h3 {
+    /*we want some space between the header of the element and the content below it*/
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+aside img {
+    /*images are displayed from top to bottom*/
+    display: block;
+    margin: 10px auto;
+    max-width: 150px;
+}
+
+
+footer {
+    padding: 30px;
+    clear: both;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+footer h2 {
+    font-size: 20px;
+}
